@@ -1,0 +1,65 @@
+/*display es la forma como ubico los elementos
+las etiquetas que se escribieron en index se organizan en bloques
+¿cuales etiques son inline-block , inline, block?
+selector universal se coloca con un *
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*border a la caja resetea todo para que se compatible con todos los navegadores*/
+
+}
+body{
+    /*antes estaba un bloque de bajo de otro, sin el diplay flex, se colocan en linea*/
+    display: flex; /*se muestra el diaply flexible, la posibilidad de que el contenedor de mueva como yo quisiera*/
+    font-size: 20px;
+    flex-flow: column; /*yo quiero se conserven las columnas, a como estaba inicialmente al inspeccionar el elemento*/
+    height: 100vh;/*altura relativa al viewport, vw, revisar otras medidas en css*/
+
+}
+.header{
+    background: green;
+    height: 3rem; /* coja una porcion de la altura del padding */
+
+}
+.conteiner{
+    background: chocolate;
+    display: flex;
+    height: inherit;/*que la altura sea heradada de la altura del padre*/
+}
+.content
+{
+    background: yellow;
+    flex: 1 1 auto; /*aplica para todo si solamente coloco flex: 1; */
+
+}
+aside{
+    background: purple;
+    flex: 0 0 25%;
+}
+.footer{
+    background: blueviolet;
+    outline: 3px solid black;
+    height: 6rem;
+    margin-top: auto; /*crece un poquito mas de acuerdo al contedor padding*/
+}
+.Menu
+{
+    
+    display: flex;
+
+
+}
+.Menu-item{
+    list-style:none ; /*quitar los puntos de la lista ordenadas*/
+    flex: 1; /*darle un espacion proporcional al contenido */
+    outline:1px solid red; /*delimitaa el contenido unicamente del menu item*/
+    line-height: 3rem; /*linea vertical*/
+    text-align: center;
+    transition: flex .5s; /*transicion para que se vea mas lento*/
+}
+.Menu-item:hover{ /*cuando pase el cursor por encima que crezca un poquito*/
+    flex: 5;
+}
+
+
